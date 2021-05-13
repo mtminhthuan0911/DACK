@@ -6,4 +6,4 @@
 - git push
 
 # Lưu ý :
-- Mỗi lần làm xong trước khi commit lên nhớ checkout qua branch mình rồi hãy commit nhá ~ ~
+- Mỗi lần làm xong trước khi "commit" lên nhớ "checkout" qua "branch mình" rồi hãy commit nhá ~ ~
