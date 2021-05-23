@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".danhmuc"></activity>
+        <activity android:name=".phuongthuc_thanhtoan" />
+        <activity android:name=".cart" />
+        <activity android:name=".chitiet_goikham3" />
+        <activity android:name=".chitiet_goikham2" />
+        <activity android:name=".chitiet_goikham1" />
+        <activity android:name=".forgotpass" />
+        <activity android:name=".signup" />
         <activity android:name=".login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +26,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
