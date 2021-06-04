@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xin chào, Thuan"
+            android:text="Xin chào, Trọng"
             android:textColor="@color/white"
             android:textSize="18dp"
             android:paddingLeft="25dp">
@@ -58,7 +58,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chiều cao: 170cm"
+            android:text="Chiều cao: 178cm"
             android:textColor="@color/white"
             android:textSize="18dp"
             android:paddingLeft="25dp"
@@ -80,7 +80,7 @@
             android:paddingLeft="250dp"
             android:textColor="@color/white"
             android:paddingTop="45dp"
-            android:text="Cân nặng: 57kg"
+            android:text="Cân nặng: 58kg"
             android:textSize="18dp">
         </TextView>
     </RelativeLayout>
