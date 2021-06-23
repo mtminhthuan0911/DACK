@@ -3,11 +3,31 @@ package com.example.yourdoctor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.yourdoctor.models.MedicalService;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import cz.msebera.android.httpclient.Header;
 
 public class login extends AppCompatActivity {
     Button btnSignIn, btnSignUp;
@@ -22,6 +42,36 @@ public class login extends AppCompatActivity {
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         DB = new DBHelper(this);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get("http://192.168.1.4:5001/api/medical-services/3", new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    MedicalService medicalService = new MedicalService();
+                    medicalService.setTitle(response.getString("title"));
+                    medicalService.setDescription(response.getString("description"));
+                    medicalService.setId(response.getLong("id"));
+
+                    btnSignIn.setText(response.getString("title"));
+                }
+                catch(Exception e) {
+
+                }
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                super.onSuccess(statusCode, headers, response);
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+            }
+        });
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +111,5 @@ public class login extends AppCompatActivity {
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
-
-
 
 }
