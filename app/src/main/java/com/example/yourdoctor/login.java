@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.example.yourdoctor.models.MedicalService;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -29,6 +30,8 @@ import javax.net.ssl.HttpsURLConnection;
 
 import cz.msebera.android.httpclient.Header;
 
+=======
+>>>>>>> 71d88bcc1ed9dc5ab9209bd744c776279f25da9d
 public class login extends AppCompatActivity {
     Button btnSignIn, btnSignUp;
     EditText phone, password;
@@ -43,6 +46,7 @@ public class login extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         DB = new DBHelper(this);
 
+<<<<<<< HEAD
         AsyncHttpClient client = new AsyncHttpClient();
         client.get("http://192.168.1.4:5001/api/medical-services/3", new JsonHttpResponseHandler() {
             @Override
@@ -73,6 +77,8 @@ public class login extends AppCompatActivity {
             }
         });
 
+=======
+>>>>>>> 71d88bcc1ed9dc5ab9209bd744c776279f25da9d
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,6 +108,7 @@ public class login extends AppCompatActivity {
 
             }
         });
+<<<<<<< HEAD
     }
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
@@ -111,5 +118,18 @@ public class login extends AppCompatActivity {
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
+=======
+    }
+    public void openMainActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void opensignup(){
+        Intent intent = new Intent(this, signup.class);
+        startActivity(intent);
+    }
+
+
+>>>>>>> 71d88bcc1ed9dc5ab9209bd744c776279f25da9d
 
 }
