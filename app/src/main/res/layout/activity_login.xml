@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="Welcome back !"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -24,32 +24,22 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="320dp"
-        android:inputType="phone"
-        android:hint="Phone number"
+        android:hint="Nhập tài khoản"
         android:background="@drawable/border_image"
-        android:id="@+id/phone"
         >
     </EditText>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_search_24"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="300dp">
-    </ImageView>
-
     <EditText
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
-        android:hint="Password"
-        android:id="@+id/password"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="370dp"
+        android:inputType="textPassword"
+        android:hint="Nhập mật khẩu"
+        android:background="@drawable/border_image"
         >
     </EditText>
-
     <ImageView
         android:layout_width="350dp"
         android:layout_height="200dp"
@@ -59,13 +49,12 @@
         android:background="@drawable/border_image">
     </ImageView>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:text="Sign in"
         android:background="@drawable/login_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="420dp"
-        android:id="@+id/btnSignIn"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="320dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -73,56 +62,54 @@
         android:text="Forgot Password?"
         android:textSize="18dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="450dp"
         >
     </TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You don't have account? "
+        android:text="You dont have account, "
         android:textSize="18dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="490dp"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up "
+        android:textSize="18dp"
+        android:layout_marginLeft="300dp"
+        android:textColor="@color/teal_200"
+        android:layout_marginTop="490dp"
         >
     </TextView>
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="Sign Up"
-        android:textSize="15dp"
-        android:layout_marginLeft="300dp"
-        android:textColor="@color/teal_200"
-        android:layout_marginTop="520dp"
-        android:background="@color/white"
-        android:id="@+id/btnSignUp"
-        />
     <ImageView
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="65dp"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="530dp"
         android:src="@drawable/icon_fb"></ImageView>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="530dp"
         android:src="@drawable/icon_tele"></ImageView>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="215dp"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="530dp"
         android:src="@drawable/icon_gmail"></ImageView>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="285dp"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="530dp"
         android:src="@drawable/icon_twt"></ImageView>
 </RelativeLayout>
