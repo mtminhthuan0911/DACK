@@ -26,8 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="320dp"
-        android:inputType="phone"
-        android:hint="Phone number"
+        android:inputType="textPhonetic"
+        android:hint="Name"
+
         android:background="@drawable/border_image"
         android:id="@+id/phone"
         >
@@ -45,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="360dp"
+        android:inputType="textPassword"
         android:hint="Password"
         android:id="@+id/password"
         >
